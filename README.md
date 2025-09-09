@@ -74,32 +74,51 @@ npm run dev
 
 ```
 src/
-├── components/         # Reusable UI components
-│   ├── MovieCard.jsx   # Movie display component
-│   ├── Search.jsx      # Search input component
-│   └── Spinner.jsx     # Loading spinner
-├── appwrite.js         # Appwrite configuration and API calls
-├── App.jsx             # Main application component
-└── index.css           # Global styles and Tailwind config
+├── components/
+│   ├── Header.jsx          # Header with hero banner and title
+│   ├── MovieCard.jsx       # Individual movie display component
+│   ├── MovieList.jsx       # Grid layout for movie cards
+│   ├── Search.jsx          # Search input component with debouncing
+│   ├── Spinner.jsx         # Loading spinner component
+│   └── TrendingMovies.jsx  # Trending movies section
+├── services/
+│   ├── appwriteService.js  # Appwrite backend integration
+│   └── tmdbService.js      # TMDB API service
+├── constants/
+│   └── api.js              # API endpoints and utilities
+├── App.jsx                 # Main application component
+├── App.css                 # Application-specific styles
+├── main.jsx                # React app entry point
+└── index.css               # Global styles and Tailwind config
 ```
 
 ## 🔧 API Integration
 
-### TMDB API
+### TMDB API (tmdbService.js)
 
 - Movie search and discovery
 - Popular movies fetching
 - Movie details and metadata
+- Centralized API configuration and error handling
 
-### Appwrite Backend
+### Appwrite Backend (appwriteService.js)
 
 - Search analytics tracking
-- Trending movies calculation
+- Trending movies calculation based on search frequency
 - Real-time data updates
+- User interaction analytics
 
-## Performance Features
+### Constants (api.js)
 
-- Debounced search (500ms delay)
-- Optimized API calls
-- Image lazy loading
-- Responsive design patterns
+- API endpoints configuration
+- Image URL generation utilities
+- Request headers and authentication setup
+
+## 📊 Performance Features
+
+- **Debounced search** (500ms delay) - Reduces API calls during typing
+- **Optimized API calls** - Centralized service layer with error handling
+- **Image lazy loading** - Improved page load performance
+- **Responsive design patterns** - Mobile-first approach
+- **Component-based architecture** - Reusable and maintainable code structure
+- **Search analytics** - Track popular searches for trending insights

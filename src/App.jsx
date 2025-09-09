@@ -42,7 +42,7 @@ function App() {
     if (searchTerm.trim()) {
       return `Search Results for "${searchTerm}"`;
     }
-    return 'Popular Movies';
+    return 'New Movies';
   };
 
   return (
