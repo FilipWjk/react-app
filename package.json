@@ -10,9 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.2",
     "@tailwindcss/vite": "^4.1.13",
+    "appwrite": "^20.0.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-use": "^17.6.0",
     "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
@@ -24,6 +29,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "playwright": "^1.55.0",
     "vite": "^7.1.2"
   }
 }
