@@ -1,12 +1,105 @@
-# React + Vite
+# 🎬 Movie Discovery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application for discovering and tracking trending movies using TMDB API and Appwrite backend.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 Real-time movie search with debounced API calls
+- 📈 Trending movies tracking based on search analytics
+- 🎨 Modern UI with Tailwind CSS and custom animations
+- 📱 Fully responsive design
+- ⚡ Fast performance with Vite
+- 🗄️ Backend integration with Appwrite for analytics
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React 19, Vite, Tailwind CSS
+- **Backend**: Appwrite (Database, Analytics)
+- **API**: The Movie Database (TMDB)
+- **Styling**: Custom CSS with Tailwind utilities
+- **Build Tool**: Vite with HMR
+
+## 📸 Screenshots
+
+![Home Page](screenshots/home.png)
+![Trending Movies](screenshots/trending.png)
+![Movie Results](screenshots/movies.png)
+
+## 🏃‍♂️ Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+- TMDB API key
+- Appwrite account
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/movie-discovery-app.git
+cd movie-discovery-app
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Set up environment variables
+
+```bash
+cp .env.example .env.local
+```
+
+4. Configure your `.env.local`:
+
+```env
+VITE_TMDB_API_KEY=your_tmdb_api_key
+VITE_APPWRITE_PROJECT_ID=your_project_id
+VITE_APPWRITE_DATABASE_ID=your_database_id
+VITE_APPWRITE_TABLE_ID=your_table_id
+```
+
+5. Start the development server
+
+```bash
+npm run dev
+```
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/         # Reusable UI components
+│   ├── MovieCard.jsx   # Movie display component
+│   ├── Search.jsx      # Search input component
+│   └── Spinner.jsx     # Loading spinner
+├── appwrite.js         # Appwrite configuration and API calls
+├── App.jsx             # Main application component
+└── index.css           # Global styles and Tailwind config
+```
+
+## 🔧 API Integration
+
+### TMDB API
+
+- Movie search and discovery
+- Popular movies fetching
+- Movie details and metadata
+
+### Appwrite Backend
+
+- Search analytics tracking
+- Trending movies calculation
+- Real-time data updates
+
+## Performance Features
+
+- Debounced search (500ms delay)
+- Optimized API calls
+- Image lazy loading
+- Responsive design patterns
