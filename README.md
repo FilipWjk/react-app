@@ -39,8 +39,8 @@ A modern React application for discovering and tracking trending movies using TM
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/movie-discovery-app.git
-cd movie-discovery-app
+git clone https://github.com/yourusername/react-app.git
+cd react-app
 ```
 
 2. Install dependencies
